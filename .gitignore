@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+
+# 每个人自己的关系设置，不进仓库（.gitignore 里 # 只能整行注释，写在模式后面会变成模式的一部分）
+config.json
+# 根目录下的临时截图（docs/ 里的照常提交）
+/*.png
+wechat_probe.png
+
+# PyInstaller 产物（JevChat-DeepSeek.spec 是源文件，照常提交）
+build/
+dist/
+*.spec.bak
+# build.bat 在根目录产出的发布 zip（170MB，只在本地压，CI 自己会压一个）
+/*.zip
+
+# 真实聊天内容只当本地测试样例，不进版本库（probe/ 下那些带 CASES 的脚本是上游的合成样例，照常提交）
+probe/chat-*.txt
+
+# 微信对话知识库：里面是真实的人际内容，只留在本机，不进版本库。
+# 只留约定说明和模板（下面两行 ! 是「例外」）。
+docs/wiki/*
+!docs/wiki/README.md
+!docs/wiki/_模板.md
+
+# preview_ui 渲染出来的界面预览图，看效果的临时产物
+probe/_*.png

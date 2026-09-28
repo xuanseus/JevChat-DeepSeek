@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  JevChat-DeepSeek 的程序图标（源文件）。改完跑 tools/make_icon.py 重新生成 docs/icon.ico。
+
+  设计：圆角绿底 + 白色聊天气泡 + 气泡里三条长短不一的横杠。
+  三条杠 = 程序给的三个候选回复；第一条最长最实 = 推荐那条置顶。
+
+  尺寸取舍：16×16 下三条杠会糊成一片，那时能认出来的只有「绿底 + 白气泡」这个轮廓，
+  所以轮廓做得够粗够清楚，细节是给 32×32 以上看的。
+  颜色跟界面主题一致：绿 #07C160（微信主题绿，跟界面 _GREEN 一致）、气泡纯白。
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- 圆角底。rx=56 跟窗口的圆角比例接近 -->
+  <rect x="0" y="0" width="256" height="256" rx="56" ry="56" fill="#07C160"/>
+
+  <!-- 气泡主体 + 左下角的小尾巴（尾巴跟主体分开画，接缝处同色看不出来） -->
+  <rect x="40" y="52" width="176" height="124" rx="30" ry="30" fill="#ffffff"/>
+  <path d="M74 168 L74 210 L116 168 Z" fill="#ffffff"/>
+
+  <!-- 三条候选：第一条最长（推荐），后两条短一截且淡一些 -->
+  <rect x="72" y="88"  width="112" height="15" rx="7.5" ry="7.5" fill="#07C160"/>
+  <rect x="72" y="118" width="80"  height="15" rx="7.5" ry="7.5" fill="#07C160" opacity="0.45"/>
+  <rect x="72" y="148" width="56"  height="15" rx="7.5" ry="7.5" fill="#07C160" opacity="0.45"/>
+</svg>
